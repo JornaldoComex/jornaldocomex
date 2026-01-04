@@ -3,182 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornal do Comex | Portal de Comércio Exterior</title>
+  <title>Jornal do Comex | Portal de Comércio Exterior 2026</title>
   
-  <!-- SEO & Social Media (Tendência 2026) -->
-  <meta name="description" content="Portal de notícias e análises sobre comércio exterior, importação e logística. Atualizado para o cenário de 2026." />
+  <!-- SEO & Metatags -->
+  <meta name="description" content="Portal de notícias e análises sobre comércio exterior, importação e logística. Atualizado 2026." />
   <meta property="og:title" content="Jornal do Comex | Inteligência em Comex" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" />
+  <meta property="og:image" content="images.unsplash.com" />
   <meta name="theme-color" content="#1d4ed8">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Script para configurar o Tailwind com suporte a Dark Mode via classe ou sistema
     tailwind.config = {
       darkMode: 'media', 
       theme: {
         extend: {
-          colors: {
-            brand: '#1d4ed8',
-          }
+          colors: { brand: '#1d4ed8' }
         }
       }
     }
   </script>
+  <style>
+    /* Suaviza a transição de cores no Dark Mode */
+    body { transition: background-color 0.3s ease, color 0.3s ease; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-  <!-- Header Modernizado -->
-  <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
+  <!-- Header com Efeito Blur -->
+  <header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-black tracking-tighter text-brand">JORNAL DO <span class="text-slate-400">COMEX</span></h1>
+      <h1 class="text-2xl font-black tracking-tighter text-brand">JORNAL DO <span class="text-slate-400 dark:text-slate-500">COMEX</span></h1>
       <nav class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
         <a href="#" class="hover:text-brand transition">Notícias</a>
         <a href="#" class="hover:text-brand transition">Análises</a>
         <a href="#" class="hover:text-brand transition">Legislação</a>
-        <a href="#" class="bg-brand text-white px-4 py-2 rounded-full text-xs">Entrevistas</a>
+        <a href="#" class="bg-brand text-white px-4 py-2 rounded-full text-xs hover:bg-blue-600 transition">Entrevistas</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section com Vidro/Blur -->
+  <!-- Hero Section (Corrigido: Alinhamento Texto e Imagem) -->
   <section class="relative bg-brand overflow-hidden">
-    <div class="absolute inset-0 opacity-20 bg-[url('www.transparenttextures.com')]"></div>
-    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center relative z-10">
-      <div>
-        <span class="bg-yellow-400 text-brand text-xs font-black px-3 py-1 rounded-full uppercase">Destaque 2026</span>
-        <h2 class="text-4xl md:text-5xl font-black text-white mt-4 mb-6 leading-tight">
-          Receita Federal moderniza processos e impacta importações.
+    <div class="absolute inset-0 opacity-10 bg-[url('www.transparenttextures.com')]"></div>
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <span class="bg-yellow-400 text-brand text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">Manchete 2026</span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4 mb-6 leading-[1.1]">
+          Receita Federal moderniza processos de importação.
         </h2>
-        <p class="text-blue-100 text-lg mb-8 leading-relaxed">
-          Nova digitalização via DUIMP e integração de sistemas promete reduzir em 30% o tempo de desembaraço.
+        <p class="text-blue-100 text-lg mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
+          A nova digitalização via DUIMP promete agilizar o desembaraço aduaneiro em até 30% neste semestre.
         </p>
-        <a href="siscomex-cronograma-desligamento-di.html" class="inline-flex items-center bg-white text-brand px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all transform hover:-translate-y-1 shadow-xl">
-          Ler matéria completa
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="siscomex-cronograma-desligamento-di.html" class="bg-white text-brand px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all shadow-xl text-center">
+            Ler matéria completa
+          </a>
+        </div>
       </div>
-      <div class="relative">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" class="rounded-3xl shadow-2xl border-4 border-white/10" alt="Logística" />
+      <div class="order-1 md:order-2 w-full">
+        <!-- Imagem com proporção controlada para evitar bugs -->
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+          <img src="images.unsplash.com" 
+               class="relative rounded-3xl shadow-2xl w-full aspect-video object-cover border border-white/20" 
+               alt="Logística de Containers">
+        </div>
       </div>
     </div>
   </section>
 
-  <main class="max-w-7xl mx-auto px-6 py-12">
+  <main class="max-w-7xl mx-auto px-6 py-16">
 
-    <!-- Indicadores Bento Grid -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      <div class="group bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 hover:border-brand transition-all">
-        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-brand mb-4 group-hover:scale-110 transition">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold">Siscomex 2026</h4>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">Cronograma oficial de desligamento da DI e migração para DUIMP.</p>
+    <!-- Grid de Indicadores (Estilo Bento) -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+      <div class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-brand mb-6 font-bold">01</div>
+        <h4 class="text-xl font-bold mb-2">Siscomex</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Cronogramas e atualizações sobre o desligamento da DI em 2026.</p>
       </div>
-      
-      <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 hover:border-brand transition-all">
-        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold">Mercado Cambial</h4>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Análise diária das variações do dólar e euro para contratos futuros.</p>
+      <div class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded-xl flex items-center justify-center text-green-600 mb-6 font-bold">02</div>
+        <h4 class="text-xl font-bold mb-2">Tributação</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Impactos práticos do novo ICMS para empresas importadoras.</p>
       </div>
-
-      <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 hover:border-brand transition-all">
-        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold">Webinars</h4>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Assista às entrevistas com diretores da Receita e SECEX.</p>
+      <div class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 bg-purple-50 dark:bg-purple-900/20 rounded-xl flex items-center justify-center text-purple-600 mb-6 font-bold">03</div>
+        <h4 class="text-xl font-bold mb-2">Vídeos</h4>
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Entrevistas exclusivas com especialistas do setor portuário.</p>
       </div>
     </section>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-      <!-- Feed de Notícias -->
-      <section class="lg:col-span-2 space-y-10">
-        <div class="flex items-center gap-4">
-          <h3 class="text-3xl font-black italic">FEED_NEWS</h3>
-          <div class="h-[2px] flex-grow bg-slate-200 dark:bg-slate-800"></div>
+      
+      <!-- Feed de Notícias (Corrigido: Imagem do ICMS) -->
+      <section class="lg:col-span-2 space-y-12">
+        <div class="flex items-center gap-4 mb-8">
+          <h3 class="text-2xl font-black uppercase tracking-tight">Últimas do Portal</h3>
+          <div class="h-px flex-grow bg-slate-200 dark:bg-slate-800"></div>
         </div>
 
-        <article class="group">
-          <div class="flex flex-col md:flex-row gap-6">
-            <div class="md:w-1/3 overflow-hidden rounded-2xl">
-              <img src="images.unsplash.com" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" alt="ICMS">
+        <!-- Artigo ICMS -->
+        <article class="group bg-white dark:bg-slate-900 p-5 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 hover:border-brand transition-all">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/3 overflow-hidden rounded-[1.5rem] h-48">
+              <img src="images.unsplash.com" 
+                   class="h-full w-full object-cover group-hover:scale-110 transition duration-700" 
+                   alt="Reunião ICMS">
             </div>
-            <div class="md:w-2/3">
-              <div class="flex gap-2 mb-3">
-                <span class="text-[10px] font-black uppercase tracking-tighter bg-slate-200 dark:bg-slate-800 px-2 py-1 rounded">TRIBUTÁRIO</span>
-                <button class="text-[10px] font-bold text-brand flex items-center gap-1">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
-                  RESUMO IA
-                </button>
+            <div class="md:w-2/3 flex flex-col justify-center">
+              <div class="flex items-center gap-3 mb-3 text-[10px] font-bold tracking-widest text-slate-400 uppercase">
+                <span>Tributário</span>
+                <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                <span class="text-brand">Resumo IA Disponível</span>
               </div>
-              <h4 class="text-2xl font-bold group-hover:text-brand transition">Mudanças no ICMS afetam importadores em vários estados</h4>
-              <p class="text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 italic">Análise detalhada sobre o impacto nas alíquotas de importação para o setor têxtil e de tecnologia.</p>
-              <a href="#" class="inline-block mt-4 font-black text-sm border-b-2 border-brand pb-1">LER REPORTAGEM</a>
+              <h4 class="text-2xl font-bold group-hover:text-brand transition tracking-tight leading-snug">
+                Mudanças no ICMS afetam importadores em vários estados brasileiros
+              </h4>
+              <p class="text-slate-500 dark:text-slate-400 mt-3 text-sm line-clamp-2">
+                Entenda o impacto das novas alíquotas na sua planilha de custos e como planejar o fluxo de caixa para 2026.
+              </p>
+              <a href="#" class="mt-5 inline-flex items-center font-black text-xs text-brand uppercase tracking-widest group-hover:gap-2 transition-all">
+                Ler matéria <span>→</span>
+              </a>
             </div>
           </div>
         </article>
 
-        <!-- Newsletter (Card Moderno) -->
-        <div class="bg-slate-900 text-white rounded-3xl p-8 relative overflow-hidden">
+        <!-- Newsletter Estilizada -->
+        <div class="bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden">
           <div class="relative z-10">
-            <h4 class="text-2xl font-bold mb-2">Comex Intelligence</h4>
-            <p class="text-slate-400 mb-6 max-w-md text-sm">Receba todas as manhãs os alertas de mudanças na legislação aduaneira direto no seu WhatsApp ou E-mail.</p>
-            <form class="flex gap-2 flex-col sm:flex-row">
-              <input type="email" placeholder="Seu melhor e-mail" class="flex-grow bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 ring-brand">
-              <button class="bg-brand hover:bg-blue-600 px-8 py-3 rounded-xl font-bold transition">Assinar Agora</button>
+            <h4 class="text-3xl font-black mb-4">Radar Comex</h4>
+            <p class="text-slate-400 mb-8 max-w-sm">O resumo técnico das mudanças legislativas, toda segunda às 08h.</p>
+            <form class="flex flex-col sm:flex-row gap-3">
+              <input type="email" placeholder="Seu e-mail profissional" class="bg-white/10 border border-white/10 rounded-2xl px-6 py-4 flex-grow focus:outline-none focus:ring-2 ring-brand transition text-sm">
+              <button class="bg-brand hover:bg-blue-600 px-8 py-4 rounded-2xl font-bold transition shadow-lg shadow-brand/20">Assinar</button>
             </form>
-          </div>
-          <div class="absolute right-[-20px] bottom-[-20px] opacity-10">
-             <svg class="w-48 h-48" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
           </div>
         </div>
       </section>
 
       <!-- Sidebar -->
-      <aside class="space-y-12">
-        <div>
-          <h4 class="text-xs font-black uppercase tracking-[0.2em] mb-6 text-slate-400">Editorias</h4>
-          <ul class="space-y-4 font-bold text-slate-700 dark:text-slate-300">
-            <li class="flex items-center justify-between hover:text-brand cursor-pointer group">
-              <span>Importação Digital</span>
-              <span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded-full group-hover:bg-brand group-hover:text-white transition">12</span>
-            </li>
-            <li class="flex items-center justify-between hover:text-brand cursor-pointer group">
-              <span>Agronegócio & Exportação</span>
-              <span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded-full group-hover:bg-brand group-hover:text-white transition">08</span>
-            </li>
-            <li class="flex items-center justify-between hover:text-brand cursor-pointer group">
-              <span>Logística Portuária</span>
-              <span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded-full group-hover:bg-brand group-hover:text-white transition">05</span>
-            </li>
-          </ul>
+      <aside class="space-y-10">
+        <div class="bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800">
+          <h4 class="font-black uppercase tracking-tighter mb-6 flex items-center gap-2 text-lg">
+            Editorias
+          </h4>
+          <nav class="flex flex-col gap-4 font-bold text-sm text-slate-600 dark:text-slate-400">
+            <a href="#" class="flex justify-between items-center hover:text-brand transition px-2">Importação <span>→</span></a>
+            <a href="#" class="flex justify-between items-center hover:text-brand transition px-2 border-t border-slate-50 dark:border-slate-800 pt-4">Exportação <span>→</span></a>
+            <a href="#" class="flex justify-between items-center hover:text-brand transition px-2 border-t border-slate-50 dark:border-slate-800 pt-4">Logística <span>→</span></a>
+            <a href="#" class="flex justify-between items-center hover:text-brand transition px-2 border-t border-slate-50 dark:border-slate-800 pt-4">Legislação <span>→</span></a>
+          </nav>
         </div>
 
-        <div class="bg-brand/5 border border-brand/20 rounded-3xl p-6">
-          <h4 class="font-black text-brand mb-2 italic">Acesso Rápido</h4>
-          <p class="text-xs text-slate-500 mb-4 italic">Links úteis para o seu dia a dia profissional.</p>
-          <div class="grid grid-cols-2 gap-2">
-            <a href="www.gov.br" class="bg-white dark:bg-slate-800 p-3 rounded-xl text-center text-[10px] font-bold shadow-sm hover:shadow-md transition">RECEITA FEDERAL</a>
-            <a href="#" class="bg-white dark:bg-slate-800 p-3 rounded-xl text-center text-[10px] font-bold shadow-sm hover:shadow-md transition">SISCOMEX</a>
+        <div class="p-8 bg-blue-50 dark:bg-blue-950/30 rounded-[2rem] border border-blue-100 dark:border-blue-900/50">
+          <h4 class="font-black text-brand mb-4 uppercase text-xs tracking-widest">Links Oficiais</h4>
+          <div class="grid grid-cols-1 gap-3">
+            <a href="www.gov.br" class="bg-white dark:bg-slate-800 p-4 rounded-2xl text-xs font-black shadow-sm text-center hover:shadow-md transition">RECEITA FEDERAL</a>
+            <a href="#" class="bg-white dark:bg-slate-800 p-4 rounded-2xl text-xs font-black shadow-sm text-center hover:shadow-md transition">PORTAL SISCOMEX</a>
           </div>
         </div>
       </aside>
+
     </div>
   </main>
 
-  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20">
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-slate-500">
-      <div class="flex flex-col items-center md:items-start">
-        <h1 class="text-xl font-black tracking-tighter text-brand mb-2">JORNAL DO COMEX</h1>
-        <p>© 2026 - O maior portal técnico de comércio exterior do Brasil.</p>
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 mt-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <h1 class="text-xl font-black tracking-tighter text-brand">JORNAL DO COMEX</h1>
+        <p class="text-slate-400 text-xs mt-2 italic">Informação técnica para profissionais do Comércio Exterior.</p>
       </div>
-      <div class="flex gap-6 font-bold">
+      <div class="flex gap-8 text-xs font-black text-slate-500 uppercase tracking-widest">
         <a href="#" class="hover:text-brand">Privacidade</a>
         <a href="#" class="hover:text-brand">Anuncie</a>
         <a href="#" class="hover:text-brand">Contato</a>
+      </div>
+      <div class="text-slate-300 dark:text-slate-600 text-[10px] font-mono">
+        v2.0.26_build
       </div>
     </div>
   </footer>
