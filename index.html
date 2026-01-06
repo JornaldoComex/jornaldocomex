@@ -110,6 +110,15 @@
       <span>Portal de Notícias de Comércio Exterior</span>
     </div>
   </footer>
-
+<script>
+    document.querySelectorAll('.noticia').forEach(function(el) {
+      el.addEventListener('click', function() {
+        const destino = el.dataset.link;
+        if (destino) {
+          window.location.href = destino;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
