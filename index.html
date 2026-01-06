@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Jornal do Comex</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -105,4 +107,154 @@ header p {
   background: rgba(0,0,0,0.6);
   display: none;
   align-items: center;
-  justify-
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #0f4c81;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Jornal do Comex</h1>
+  <p>Informação estratégica para comércio exterior</p>
+</header>
+
+<main class="container">
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Buscar notícia">
+    <select id="category">
+      <option value="todas">Todas as categorias</option>
+      <option value="importacao">Importação</option>
+      <option value="exportacao">Exportação</option>
+      <option value="tributacao">Tributação</option>
+      <option value="logistica">Logística</option>
+    </select>
+  </div>
+
+  <div class="grid" id="newsGrid"></div>
+
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <button id="closeModal">Fechar</button>
+  </div>
+</div>
+
+<footer>
+  © Jornal do Comex
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const noticias = [
+    {
+      titulo: "Mudanças na tributação de importação",
+      texto: "Novas regras impactam diretamente empresas que utilizam benefícios fiscais.",
+      categoria: "tributacao"
+    },
+    {
+      titulo: "Aumento no fluxo portuário em 2026",
+      texto: "Portos brasileiros registram crescimento expressivo no primeiro trimestre.",
+      categoria: "logistica"
+    },
+    {
+      titulo: "Exportações brasileiras batem recorde",
+      texto: "Setor de commodities lidera crescimento nas vendas externas.",
+      categoria: "exportacao"
+    },
+    {
+      titulo: "Facilitação aduaneira em pauta",
+      texto: "Novas propostas prometem reduzir burocracia nos processos.",
+      categoria: "importacao"
+    }
+  ];
+
+  const grid = document.getElementById("newsGrid");
+  const search = document.getElementById("search");
+  const category = document.getElementById("category");
+  const modal = document.getElementById("modal");
+
+  function render() {
+    grid.innerHTML = "";
+
+    const termo = search.value.toLowerCase();
+    const cat = category.value;
+
+    noticias
+      .filter(n =>
+        (cat === "todas" || n.categoria === cat) &&
+        n.titulo.toLowerCase().includes(termo)
+      )
+      .forEach(n => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3>${n.titulo}</h3>
+          <p>${n.texto.substring(0, 80)}...</p>
+          <span class="tag">${n.categoria}</span>
+        `;
+        card.addEventListener("click", () => openModal(n));
+        grid.appendChild(card);
+      });
+  }
+
+  function openModal(noticia) {
+    document.getElementById("modalTitle").innerText = noticia.titulo;
+    document.getElementById("modalText").innerText = noticia.texto;
+    modal.classList.add("active");
+  }
+
+  document.getElementById("closeModal").addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  search.addEventListener("input", render);
+  category.addEventListener("change", render);
+
+  render();
+
+});
+</script>
+
+</body>
+</html>
