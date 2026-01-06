@@ -1,290 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Jornal do Comex</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-:root{
-  --amarelo:#c9a227;
-  --preto:#0f0f0f;
-  --cinza:#f2f2f2;
-  --texto:#2b2b2b;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-  background:var(--cinza);
-  color:var(--texto);
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-header{
-  background:var(--preto);
-  color:#fff;
-}
-
-.topo{
-  max-width:1300px;
-  margin:auto;
-  padding:20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
-  color:var(--amarelo);
-}
-
-.menu a{
-  margin-left:22px;
-  font-size:14px;
-}
-
-.menu a:hover{
-  color:var(--amarelo);
-}
-
-.banner{
-  background:#fff;
-  padding:30px 20px;
-}
-
-.banner-inner{
-  max-width:1300px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:30px;
-}
-
-.destaque{
-  background:linear-gradient(135deg,#111,#333);
-  color:#fff;
-  padding:30px;
-  border-radius:8px;
-}
-
-.destaque span{
-  color:var(--amarelo);
-  font-size:13px;
-  font-weight:bold;
-}
-
-.destaque h1{
-  margin:15px 0;
-  font-size:32px;
-}
-
-.destaque p{
-  line-height:1.6;
-  font-size:15px;
-}
-
-.box-secundaria{
-  background:#fff;
-  padding:20px;
-  border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,.05);
-}
-
-.box-secundaria h3{
-  border-bottom:2px solid var(--amarelo);
-  padding-bottom:8px;
-  margin-bottom:15px;
-}
-
-.box-secundaria article{
-  margin-bottom:15px;
-}
-
-.box-secundaria article h4{
-  font-size:15px;
-  margin-bottom:5px;
-}
-
-.container{
-  max-width:1300px;
-  margin:40px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:3fr 1fr;
-  gap:30px;
-}
-
-.noticias article{
-  background:#fff;
-  padding:25px;
-  border-radius:8px;
-  margin-bottom:25px;
-  box-shadow:0 5px 15px rgba(0,0,0,.05);
-}
-
-.noticias span{
-  font-size:12px;
-  color:var(--amarelo);
-  font-weight:bold;
-}
-
-.noticias h2{
-  margin:10px 0;
-  font-size:22px;
-}
-
-.noticias p{
-  line-height:1.6;
-  font-size:14px;
-}
-
-.sidebar{
-  background:#fff;
-  padding:25px;
-  border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,.05);
-  height:fit-content;
-}
-
-.sidebar h3{
-  margin-bottom:15px;
-  border-bottom:2px solid var(--amarelo);
-  padding-bottom:8px;
-}
-
-.sidebar ul{
-  list-style:none;
-}
-
-.sidebar li{
-  margin-bottom:10px;
-  font-size:14px;
-}
-
-.footer{
-  background:var(--preto);
-  color:#ccc;
-  text-align:center;
-  padding:25px;
-  margin-top:40px;
-  font-size:13px;
-}
-
-@media(max-width:1000px){
-  .banner-inner,.container{
-    grid-template-columns:1fr;
-  }
-  .menu{
-    display:none;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornal do Comex | Portal de Comércio Exterior</title>
+  <meta name="description" content="Portal de notícias, análises e entrevistas sobre comércio exterior, importação, exportação e logística." />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-100 text-gray-900">
 
-<body>
-
-<header>
-  <div class="topo">
-    <div class="logo">Jornal do Comex</div>
-    <nav class="menu">
-      <a href="#">Notícias</a>
-      <a href="#">Siscomex</a>
-      <a href="#">Legislação</a>
-      <a href="#">Análises</a>
-      <a href="#">Entrevistas</a>
-      <a href="#">Contato</a>
-    </nav>
-  </div>
-</header>
-
-<section class="banner">
-  <div class="banner-inner">
-    <div class="destaque">
-      <span>Comunicado Oficial</span>
-      <h1>Siscomex divulga cronograma de desligamento da DI</h1>
-      <p>
-        A Receita Federal confirmou o cronograma oficial para a descontinuação
-        da Declaração de Importação, com transição gradual para a DUIMP no Portal
-        Único do Comércio Exterior.
-      </p>
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-blue-700">Jornal do Comex</h1>
+      <nav class="hidden md:flex gap-6 text-sm font-semibold">
+        <a href="#" class="hover:text-blue-600">Notícias</a>
+        <a href="#" class="hover:text-blue-600">Análises</a>
+        <a href="#" class="hover:text-blue-600">Entrevistas</a>
+        <a href="#" class="hover:text-blue-600">Vídeos</a>
+        <a href="#" class="hover:text-blue-600">Legislação</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="box-secundaria">
-      <h3>Últimos Comunicados</h3>
-      <article>
-        <h4>Portal Único recebe ajustes operacionais</h4>
-        <p>Atualizações técnicas focam estabilidade e controle.</p>
-      </article>
-      <article>
-        <h4>RFB orienta operadores sobre cronograma</h4>
-        <p>Empresas devem revisar seus fluxos internos.</p>
-      </article>
+  <section class="bg-blue-700 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="uppercase text-sm font-semibold">Manchete</span>
+        <h2 class="text-4xl font-extrabold mt-2 mb-4">Receita Federal moderniza processos e impacta importações em 2026</h2>
+        <p class="text-lg opacity-90 mb-6">Nova digitalização promete mais agilidade e controle no comércio exterior brasileiro.</p>
+       <a href="siscomex-cronograma-desligamento-di.html" 
+   class="inline-block bg-white text-blue-700 px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+   Ler matéria</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" class="rounded-xl shadow-lg" />
     </div>
-  </div>
-</section>
-
-<main class="container">
-  <section class="noticias">
-
-    <article>
-      <span>Análise Técnica</span>
-      <h2>Impactos do desligamento da DI nas importações</h2>
-      <p>
-        A migração definitiva para a DUIMP exige adaptação sistêmica,
-        revisão de processos e maior integração entre áreas fiscal,
-        logística e aduaneira.
-      </p>
-    </article>
-
-    <article>
-      <span>Siscomex</span>
-      <h2>DUIMP passa a concentrar dados do despacho aduaneiro</h2>
-      <p>
-        O novo modelo amplia a rastreabilidade das operações,
-        reduz redundâncias documentais e fortalece o controle fiscal.
-      </p>
-    </article>
-
-    <article>
-      <span>Legislação</span>
-      <h2>Receita Federal reforça diretrizes do Portal Único</h2>
-      <p>
-        Normativos recentes destacam a necessidade de conformidade
-        com os novos módulos e prazos estabelecidos.
-      </p>
-    </article>
-
   </section>
 
-  <aside class="sidebar">
-    <h3>Editorias</h3>
-    <ul>
-      <li>Importação</li>
-      <li>Exportação</li>
-      <li>Siscomex</li>
-      <li>Legislação Aduaneira</li>
-      <li>Tributação</li>
-      <li>Logística</li>
-      <li>Opinião</li>
-    </ul>
-  </aside>
+  <main class="max-w-7xl mx-auto px-6 py-12">
+
+  <!-- Faixa de indicadores -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+    <div class="bg-white rounded-xl shadow p-6">
+      <span class="text-xs uppercase text-gray-500">Atualização Oficial</span>
+      <h4 class="text-lg font-bold mt-2">Siscomex</h4>
+      <p class="text-sm text-gray-600 mt-1">Comunicados e cronogramas oficiais</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6">
+      <span class="text-xs uppercase text-gray-500">Análise</span>
+      <h4 class="text-lg font-bold mt-2">Comércio Exterior</h4>
+      <p class="text-sm text-gray-600 mt-1">Impactos práticos para empresas</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6">
+      <span class="text-xs uppercase text-gray-500">Conteúdo</span>
+      <h4 class="text-lg font-bold mt-2">Entrevistas e Vídeos</h4>
+      <p class="text-sm text-gray-600 mt-1">Especialistas do setor</p>
+    </div>
+  </section>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <section class="lg:col-span-2 space-y-8">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold">Últimas Notícias</h3>
+        <span class="text-sm text-gray-500">Atualizado semanalmente</span>
+      </div>
+
+      <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+        <span class="text-xs text-green-600 font-semibold">Leitura acessível</span>
+        <h4 class="text-xl font-bold mt-2">Mudanças no ICMS afetam importadores em vários estados</h4>
+        <p class="text-gray-600 mt-2">Entenda de forma clara o que muda e como se preparar.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-3 inline-block">Ler mais</a>
+      </article>
+
+      <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+        <span class="text-xs text-purple-600 font-semibold">Análise técnica</span>
+        <h4 class="text-xl font-bold mt-2">Impactos fiscais da DUIMP no desembaraço aduaneiro</h4>
+        <p class="text-gray-600 mt-2">Visão aprofundada para profissionais de comércio exterior.</p>
+        <a href="#" class="text-blue-600 font-semibold mt-3 inline-block">Ler análise</a>
+      </article>
+    </section>
+
+    <aside class="space-y-8">
+      <div class="bg-white rounded-xl shadow p-6">
+        <h4 class="font-bold mb-4">Editorias</h4>
+        <ul class="space-y-2 text-sm">
+          <li>Importação</li>
+          <li>Exportação</li>
+          <li>Tributação</li>
+          <li>Logística</li>
+          <li>Legislação</li>
+          <li>Opinião</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-6">
+        <h4 class="font-bold mb-3">Newsletter Semanal</h4>
+        <p class="text-sm text-gray-600 mb-4">Resumo técnico e acessível do comércio exterior.</p>
+        <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold">Assinar</button>
+      </div>
+    </aside>
+
+  </div>
+
 </main>
 
-<footer class="footer">
-  © 2026 Jornal do Comex • Informação técnica e acessível sobre comércio exterior
-</footer>
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
+      <span> 2026 Jornal do Comex</span>
+      <span>Portal de Notícias de Comércio Exterior</span>
+    </div>
+  </footer>
 
 </body>
 </html>
