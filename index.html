@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornal do Comex | Portal de Comércio Exterior</title>
-  <meta name="description" content="Portal de notícias, análises e entrevistas sobre comércio exterior, importação, exportação e logística." />
-  <script src="https://cdn.tailwindcss.com"></script>
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* VARIÁVEIS */
+:root {
+  --amarelo: #d79a1e;
+  --amarelo-destaque: #f2b705;
+  --cinza-escuro: #1f1f1f;
+  --cinza-medio: #555;
+  --fundo: #f7f7f7;
+}
+
+/* BODY */
+body {
+  background-color: var(--fundo);
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.logo span {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--amarelo);
+}
+
+/* MENU */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--amarelo);
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* MANCHETE PRINCIPAL */
+.hero {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--cinza-medio);
+}
+
+/* GRID DE NOTÍCIAS */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD DE NOTÍCIA */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGEM DO CARD */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTEÚDO DO CARD */
+.card-content {
+  padding: 20px;
+}
+
+.card-content span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--amarelo);
+  text-transform: uppercase;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: var(--cinza-medio);
+}
+
+/* BOTÃO */
+.card-content a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  background: var(--amarelo);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.card-content a:hover {
+  background: var(--amarelo-destaque);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  background: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
 </head>
 <body class="bg-gray-100 text-gray-900">
 
