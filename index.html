@@ -1,215 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Jornal do Comex</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Jornal do Comex</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --amarelo: #c9a227;
-      --preto: #111;
-      --cinza: #f4f4f4;
-      --texto: #333;
-    }
+<style>
+:root{
+  --amarelo:#c9a227;
+  --preto:#0f0f0f;
+  --cinza:#f2f2f2;
+  --texto:#2b2b2b;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-    body {
-      background: var(--cinza);
-      color: var(--texto);
-    }
+body{
+  background:var(--cinza);
+  color:var(--texto);
+}
 
-    header {
-      background: var(--preto);
-      color: #fff;
-      padding: 20px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
-    header h1 {
-      font-size: 26px;
-      color: var(--amarelo);
-    }
+header{
+  background:var(--preto);
+  color:#fff;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+.topo{
+  max-width:1300px;
+  margin:auto;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    nav a:hover {
-      color: var(--amarelo);
-    }
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:var(--amarelo);
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 30px;
-    }
+.menu a{
+  margin-left:22px;
+  font-size:14px;
+}
 
-    .destaque {
-      background: #fff;
-      padding: 25px;
-      border-radius: 6px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      margin-bottom: 25px;
-    }
+.menu a:hover{
+  color:var(--amarelo);
+}
 
-    .destaque span {
-      color: var(--amarelo);
-      font-size: 13px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+.banner{
+  background:#fff;
+  padding:30px 20px;
+}
 
-    .destaque h2 {
-      margin: 10px 0;
-      font-size: 26px;
-      color: var(--preto);
-    }
+.banner-inner{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
 
-    .destaque p {
-      font-size: 15px;
-      line-height: 1.6;
-    }
+.destaque{
+  background:linear-gradient(135deg,#111,#333);
+  color:#fff;
+  padding:30px;
+  border-radius:8px;
+}
 
-    .lista-noticias article {
-      background: #fff;
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    }
+.destaque span{
+  color:var(--amarelo);
+  font-size:13px;
+  font-weight:bold;
+}
 
-    .lista-noticias h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
+.destaque h1{
+  margin:15px 0;
+  font-size:32px;
+}
 
-    .lista-noticias p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
+.destaque p{
+  line-height:1.6;
+  font-size:15px;
+}
 
-    aside {
-      background: #fff;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      height: fit-content;
-    }
+.box-secundaria{
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
 
-    aside h3 {
-      margin-bottom: 15px;
-      color: var(--preto);
-      font-size: 18px;
-      border-bottom: 2px solid var(--amarelo);
-      padding-bottom: 5px;
-    }
+.box-secundaria h3{
+  border-bottom:2px solid var(--amarelo);
+  padding-bottom:8px;
+  margin-bottom:15px;
+}
 
-    aside ul {
-      list-style: none;
-    }
+.box-secundaria article{
+  margin-bottom:15px;
+}
 
-    aside li {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
+.box-secundaria article h4{
+  font-size:15px;
+  margin-bottom:5px;
+}
 
-    footer {
-      background: var(--preto);
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 13px;
-    }
+.container{
+  max-width:1300px;
+  margin:40px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:3fr 1fr;
+  gap:30px;
+}
 
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
+.noticias article{
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+  margin-bottom:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
 
-      nav {
-        display: none;
-      }
-    }
-  </style>
+.noticias span{
+  font-size:12px;
+  color:var(--amarelo);
+  font-weight:bold;
+}
+
+.noticias h2{
+  margin:10px 0;
+  font-size:22px;
+}
+
+.noticias p{
+  line-height:1.6;
+  font-size:14px;
+}
+
+.sidebar{
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+  height:fit-content;
+}
+
+.sidebar h3{
+  margin-bottom:15px;
+  border-bottom:2px solid var(--amarelo);
+  padding-bottom:8px;
+}
+
+.sidebar ul{
+  list-style:none;
+}
+
+.sidebar li{
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+.footer{
+  background:var(--preto);
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+  font-size:13px;
+}
+
+@media(max-width:1000px){
+  .banner-inner,.container{
+    grid-template-columns:1fr;
+  }
+  .menu{
+    display:none;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Jornal do Comex</h1>
-  <nav>
-    <a href="#">Notícias</a>
-    <a href="#">Legislação</a>
-    <a href="#">Siscomex</a>
-    <a href="#">Análises</a>
-    <a href="#">Contato</a>
-  </nav>
+  <div class="topo">
+    <div class="logo">Jornal do Comex</div>
+    <nav class="menu">
+      <a href="#">Notícias</a>
+      <a href="#">Siscomex</a>
+      <a href="#">Legislação</a>
+      <a href="#">Análises</a>
+      <a href="#">Entrevistas</a>
+      <a href="#">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<main class="container">
-
-  <section>
+<section class="banner">
+  <div class="banner-inner">
     <div class="destaque">
-      <span>Destaque Oficial</span>
-      <h2>Siscomex divulga cronograma de desligamento da DI</h2>
+      <span>Comunicado Oficial</span>
+      <h1>Siscomex divulga cronograma de desligamento da DI</h1>
       <p>
-        A Receita Federal confirmou o cronograma oficial para o desligamento gradual da Declaração de Importação,
-        com migração definitiva para a DUIMP. A medida faz parte do processo de modernização do comércio exterior
-        brasileiro e impacta diretamente importadores, despachantes e operadores logísticos.
+        A Receita Federal confirmou o cronograma oficial para a descontinuação
+        da Declaração de Importação, com transição gradual para a DUIMP no Portal
+        Único do Comércio Exterior.
       </p>
     </div>
 
-    <div class="lista-noticias">
+    <div class="box-secundaria">
+      <h3>Últimos Comunicados</h3>
       <article>
-        <h3>Receita Federal reforça orientações sobre uso da DUIMP</h3>
-        <p>
-          Comunicados recentes do Siscomex destacam ajustes operacionais e recomendações técnicas
-          para adaptação das empresas ao novo modelo de despacho aduaneiro.
-        </p>
+        <h4>Portal Único recebe ajustes operacionais</h4>
+        <p>Atualizações técnicas focam estabilidade e controle.</p>
       </article>
-
       <article>
-        <h3>Atualizações no Portal Único do Comércio Exterior</h3>
-        <p>
-          Foram publicadas melhorias nos módulos de importação com foco em controle, rastreabilidade
-          e integração entre órgãos anuentes.
-        </p>
+        <h4>RFB orienta operadores sobre cronograma</h4>
+        <p>Empresas devem revisar seus fluxos internos.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<main class="container">
+  <section class="noticias">
+
+    <article>
+      <span>Análise Técnica</span>
+      <h2>Impactos do desligamento da DI nas importações</h2>
+      <p>
+        A migração definitiva para a DUIMP exige adaptação sistêmica,
+        revisão de processos e maior integração entre áreas fiscal,
+        logística e aduaneira.
+      </p>
+    </article>
+
+    <article>
+      <span>Siscomex</span>
+      <h2>DUIMP passa a concentrar dados do despacho aduaneiro</h2>
+      <p>
+        O novo modelo amplia a rastreabilidade das operações,
+        reduz redundâncias documentais e fortalece o controle fiscal.
+      </p>
+    </article>
+
+    <article>
+      <span>Legislação</span>
+      <h2>Receita Federal reforça diretrizes do Portal Único</h2>
+      <p>
+        Normativos recentes destacam a necessidade de conformidade
+        com os novos módulos e prazos estabelecidos.
+      </p>
+    </article>
+
   </section>
 
-  <aside>
+  <aside class="sidebar">
     <h3>Editorias</h3>
     <ul>
       <li>Importação</li>
       <li>Exportação</li>
-      <li>Legislação Aduaneira</li>
       <li>Siscomex</li>
+      <li>Legislação Aduaneira</li>
       <li>Tributação</li>
       <li>Logística</li>
+      <li>Opinião</li>
     </ul>
   </aside>
-
 </main>
 
-<footer>
-  © 2026 Jornal do Comex • Portal de notícias sobre comércio exterior
+<footer class="footer">
+  © 2026 Jornal do Comex • Informação técnica e acessível sobre comércio exterior
 </footer>
 
 </body>
