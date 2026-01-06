@@ -1,257 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jornal do Comex</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f4f6f9;
-  color: #1f2937;
-}
-
-header {
-  background: linear-gradient(135deg, #0f4c81, #0b355a);
-  color: #fff;
-  padding: 24px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-header p {
-  margin-top: 6px;
-  opacity: 0.9;
-}
-
-.container {
-  padding: 24px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.controls {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.controls input,
-.controls select {
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-  width: 100%;
-  max-width: 260px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #4b5563;
-}
-
-.tag {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-  background: #e0ecf8;
-  color: #0f4c81;
-  font-weight: 600;
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: #fff;
-  max-width: 600px;
-  width: 100%;
-  border-radius: 12px;
-  padding: 24px;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-}
-
-.modal-content button {
-  margin-top: 20px;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #0f4c81;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 16px;
-  font-size: 13px;
-  color: #6b7280;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornal do Comex | Portal de Comércio Exterior</title>
+  <meta name="description" content="Portal de notícias, análises e entrevistas sobre comércio exterior, importação, exportação e logística." />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<header>
-  <h1>Jornal do Comex</h1>
-  <p>Informação estratégica para comércio exterior</p>
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-extrabold text-blue-700">Jornal do Comex</h1>
+    <nav class="hidden md:flex gap-6 text-sm font-semibold">
+      <a href="#" class="hover:text-blue-600">Notícias</a>
+      <a href="#" class="hover:text-blue-600">Análises</a>
+      <a href="#" class="hover:text-blue-600">Entrevistas</a>
+      <a href="#" class="hover:text-blue-600">Vídeos</a>
+      <a href="#" class="hover:text-blue-600">Legislação</a>
+    </nav>
+  </div>
 </header>
 
-<main class="container">
+<section class="bg-blue-700 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <span class="uppercase text-sm font-semibold">Manchete</span>
+      <h2 class="text-4xl font-extrabold mt-2 mb-4">Receita Federal moderniza processos e impacta importações em 2026</h2>
+      <p class="text-lg opacity-90 mb-6">Nova digitalização promete mais agilidade e controle no comércio exterior brasileiro.</p>
+      <a href="siscomex-cronograma-desligamento-di.html"
+         class="inline-block bg-white text-blue-700 px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+         Ler matéria
+      </a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" class="rounded-xl shadow-lg" />
+  </div>
+</section>
 
-  <div class="controls">
-    <input type="text" id="search" placeholder="Buscar notícia">
-    <select id="category">
-      <option value="todas">Todas as categorias</option>
-      <option value="importacao">Importação</option>
-      <option value="exportacao">Exportação</option>
-      <option value="tributacao">Tributação</option>
-      <option value="logistica">Logística</option>
-    </select>
+<main class="max-w-7xl mx-auto px-6 py-12">
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
+    <span class="text-xs uppercase text-gray-500">Atualização Oficial</span>
+    <h4 class="text-lg font-bold mt-2">Siscomex</h4>
+    <p class="text-sm text-gray-600 mt-1">Comunicados e cronogramas oficiais</p>
+  </div>
+  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
+    <span class="text-xs uppercase text-gray-500">Análise</span>
+    <h4 class="text-lg font-bold mt-2">Comércio Exterior</h4>
+    <p class="text-sm text-gray-600 mt-1">Impactos práticos para empresas</p>
+  </div>
+  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
+    <span class="text-xs uppercase text-gray-500">Conteúdo</span>
+    <h4 class="text-lg font-bold mt-2">Entrevistas e Vídeos</h4>
+    <p class="text-sm text-gray-600 mt-1">Especialistas do setor</p>
+  </div>
+</section>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+<section class="lg:col-span-2 space-y-8">
+  <div class="flex items-center justify-between">
+    <h3 class="text-2xl font-bold">Últimas Notícias</h3>
+    <input id="busca" placeholder="Buscar notícia"
+           class="border rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"/>
   </div>
 
-  <div class="grid" id="newsGrid"></div>
+  <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 cursor-pointer noticia"
+           data-categoria="Tributação"
+           data-texto="Entenda de forma clara o que muda e como se preparar.">
+    <span class="text-xs text-green-600 font-semibold">Leitura acessível</span>
+    <h4 class="text-xl font-bold mt-2 titulo">Mudanças no ICMS afetam importadores em vários estados</h4>
+    <p class="text-gray-600 mt-2">Entenda de forma clara o que muda e como se preparar.</p>
+    <span class="text-blue-600 font-semibold mt-3 inline-block">Ler mais</span>
+  </article>
 
+  <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 cursor-pointer noticia"
+           data-categoria="Importação"
+           data-texto="Visão aprofundada para profissionais de comércio exterior.">
+    <span class="text-xs text-purple-600 font-semibold">Análise técnica</span>
+    <h4 class="text-xl font-bold mt-2 titulo">Impactos fiscais da DUIMP no desembaraço aduaneiro</h4>
+    <p class="text-gray-600 mt-2">Visão aprofundada para profissionais de comércio exterior.</p>
+    <span class="text-blue-600 font-semibold mt-3 inline-block">Ler análise</span>
+  </article>
+</section>
+
+<aside class="space-y-8">
+  <div class="bg-white rounded-xl shadow p-6">
+    <h4 class="font-bold mb-4">Editorias</h4>
+    <ul class="space-y-2 text-sm">
+      <li class="cursor-pointer hover:text-blue-600 filtro">Importação</li>
+      <li class="cursor-pointer hover:text-blue-600 filtro">Exportação</li>
+      <li class="cursor-pointer hover:text-blue-600 filtro">Tributação</li>
+      <li class="cursor-pointer hover:text-blue-600 filtro">Logística</li>
+      <li class="cursor-pointer hover:text-blue-600 filtro">Legislação</li>
+      <li class="cursor-pointer hover:text-blue-600 filtro">Opinião</li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl shadow p-6">
+    <h4 class="font-bold mb-3">Newsletter Semanal</h4>
+    <p class="text-sm text-gray-600 mb-4">Resumo técnico e acessível do comércio exterior.</p>
+    <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">
+      Assinar
+    </button>
+  </div>
+</aside>
+
+</div>
 </main>
 
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
-    <button id="closeModal">Fechar</button>
+<footer class="bg-white border-t">
+  <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-gray-500 flex justify-between">
+    <span>2026 Jornal do Comex</span>
+    <span>Portal de Notícias de Comércio Exterior</span>
+  </div>
+</footer>
+
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-xl w-full p-6">
+    <h3 id="modalTitulo" class="text-xl font-bold mb-3"></h3>
+    <p id="modalTexto" class="text-gray-700"></p>
+    <button id="fecharModal" class="mt-6 bg-blue-700 text-white px-4 py-2 rounded-lg">Fechar</button>
   </div>
 </div>
 
-<footer>
-  © Jornal do Comex
-</footer>
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const noticias = [
-    {
-      titulo: "Mudanças na tributação de importação",
-      texto: "Novas regras impactam diretamente empresas que utilizam benefícios fiscais.",
-      categoria: "tributacao"
-    },
-    {
-      titulo: "Aumento no fluxo portuário em 2026",
-      texto: "Portos brasileiros registram crescimento expressivo no primeiro trimestre.",
-      categoria: "logistica"
-    },
-    {
-      titulo: "Exportações brasileiras batem recorde",
-      texto: "Setor de commodities lidera crescimento nas vendas externas.",
-      categoria: "exportacao"
-    },
-    {
-      titulo: "Facilitação aduaneira em pauta",
-      texto: "Novas propostas prometem reduzir burocracia nos processos.",
-      categoria: "importacao"
-    }
-  ];
-
-  const grid = document.getElementById("newsGrid");
-  const search = document.getElementById("search");
-  const category = document.getElementById("category");
+  const noticias = document.querySelectorAll(".noticia");
   const modal = document.getElementById("modal");
+  const modalTitulo = document.getElementById("modalTitulo");
+  const modalTexto = document.getElementById("modalTexto");
+  const fecharModal = document.getElementById("fecharModal");
+  const busca = document.getElementById("busca");
+  const filtros = document.querySelectorAll(".filtro");
 
-  function render() {
-    grid.innerHTML = "";
-
-    const termo = search.value.toLowerCase();
-    const cat = category.value;
-
-    noticias
-      .filter(n =>
-        (cat === "todas" || n.categoria === cat) &&
-        n.titulo.toLowerCase().includes(termo)
-      )
-      .forEach(n => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <h3>${n.titulo}</h3>
-          <p>${n.texto.substring(0, 80)}...</p>
-          <span class="tag">${n.categoria}</span>
-        `;
-        card.addEventListener("click", () => openModal(n));
-        grid.appendChild(card);
-      });
-  }
-
-  function openModal(noticia) {
-    document.getElementById("modalTitle").innerText = noticia.titulo;
-    document.getElementById("modalText").innerText = noticia.texto;
-    modal.classList.add("active");
-  }
-
-  document.getElementById("closeModal").addEventListener("click", () => {
-    modal.classList.remove("active");
+  noticias.forEach(n => {
+    n.addEventListener("click", () => {
+      modalTitulo.innerText = n.querySelector(".titulo").innerText;
+      modalTexto.innerText = n.dataset.texto;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
   });
 
-  search.addEventListener("input", render);
-  category.addEventListener("change", render);
+  fecharModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
 
-  render();
+  busca.addEventListener("input", e => {
+    const termo = e.target.value.toLowerCase();
+    noticias.forEach(n => {
+      n.style.display = n.innerText.toLowerCase().includes(termo) ? "" : "none";
+    });
+  });
+
+  filtros.forEach(f => {
+    f.addEventListener("click", () => {
+      const cat = f.innerText;
+      noticias.forEach(n => {
+        n.style.display = n.dataset.categoria === cat ? "" : "none";
+      });
+    });
+  });
 
 });
 </script>
