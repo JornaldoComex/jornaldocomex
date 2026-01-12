@@ -13,13 +13,18 @@
 <header class="bg-white shadow sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-extrabold text-blue-700">Jornal do Comex</h1>
-    <nav class="hidden md:flex gap-6 text-sm font-semibold">
-      <a href="#" class="hover:text-blue-600">Notícias</a>
-      <a href="#" class="hover:text-blue-600">Análises</a>
-      <a href="#" class="hover:text-blue-600">Entrevistas</a>
-      <a href="#" class="hover:text-blue-600">Vídeos</a>
-      <a href="#" class="hover:text-blue-600">Legislação</a>
-    </nav>
+    <div class="flex gap-6 items-center">
+      <nav class="hidden md:flex gap-6 text-sm font-semibold">
+        <a href="#" class="hover:text-blue-600">Notícias</a>
+        <a href="#" class="hover:text-blue-600">Análises</a>
+        <a href="#" class="hover:text-blue-600">Entrevistas</a>
+        <a href="#" class="hover:text-blue-600">Vídeos</a>
+        <a href="#" class="hover:text-blue-600">Legislação</a>
+      </nav>
+      <button id="btnLogin" class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+        Entrar
+      </button>
+    </div>
   </div>
 </header>
 
@@ -29,9 +34,8 @@
       <span class="uppercase text-sm font-semibold">Manchete</span>
       <h2 class="text-4xl font-extrabold mt-2 mb-4">Receita Federal moderniza processos e impacta importações em 2026</h2>
       <p class="text-lg opacity-90 mb-6">Nova digitalização promete mais agilidade e controle no comércio exterior brasileiro.</p>
-      <a href="siscomex-cronograma-desligamento-di.html"
-         class="inline-block bg-white text-blue-700 px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
-         Ler matéria
+      <a href="#" class="inline-block bg-white text-blue-700 px-6 py-3 font-semibold rounded-lg shadow-md">
+        Ler matéria
       </a>
     </div>
     <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" class="rounded-xl shadow-lg" />
@@ -41,69 +45,40 @@
 <main class="max-w-7xl mx-auto px-6 py-12">
 
 <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
-    <span class="text-xs uppercase text-gray-500">Atualização Oficial</span>
-    <h4 class="text-lg font-bold mt-2">Siscomex</h4>
-    <p class="text-sm text-gray-600 mt-1">Comunicados e cronogramas oficiais</p>
-  </div>
-  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
-    <span class="text-xs uppercase text-gray-500">Análise</span>
-    <h4 class="text-lg font-bold mt-2">Comércio Exterior</h4>
-    <p class="text-sm text-gray-600 mt-1">Impactos práticos para empresas</p>
-  </div>
-  <div class="bg-white rounded-xl shadow p-6 cursor-pointer hover:shadow-lg transition">
-    <span class="text-xs uppercase text-gray-500">Conteúdo</span>
-    <h4 class="text-lg font-bold mt-2">Entrevistas e Vídeos</h4>
-    <p class="text-sm text-gray-600 mt-1">Especialistas do setor</p>
-  </div>
+  <div class="bg-white rounded-xl shadow p-6">Siscomex</div>
+  <div class="bg-white rounded-xl shadow p-6">Análises</div>
+  <div class="bg-white rounded-xl shadow p-6">Entrevistas</div>
 </section>
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
 <section class="lg:col-span-2 space-y-8">
-  <div class="flex items-center justify-between">
-    <h3 class="text-2xl font-bold">Últimas Notícias</h3>
-    <input id="busca" placeholder="Buscar notícia"
-           class="border rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"/>
-  </div>
+  <h3 class="text-2xl font-bold">Últimas Notícias</h3>
 
-  <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 cursor-pointer noticia"
-           data-categoria="Tributação"
-           data-texto="Entenda de forma clara o que muda e como se preparar.">
-    <span class="text-xs text-green-600 font-semibold">Leitura acessível</span>
-    <h4 class="text-xl font-bold mt-2 titulo">Mudanças no ICMS afetam importadores em vários estados</h4>
-    <p class="text-gray-600 mt-2">Entenda de forma clara o que muda e como se preparar.</p>
-    <span class="text-blue-600 font-semibold mt-3 inline-block">Ler mais</span>
+  <article class="bg-white rounded-xl shadow p-6 noticia premium">
+    <span class="text-xs text-purple-600 font-semibold">Conteúdo Premium</span>
+    <h4 class="text-xl font-bold mt-2">Impactos fiscais da DUIMP no desembaraço aduaneiro</h4>
+    <p class="text-gray-600 mt-2">Análise exclusiva para assinantes.</p>
+    <button class="mt-3 text-blue-700 font-semibold acessarPremium">Acessar conteúdo</button>
   </article>
 
-  <article class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 cursor-pointer noticia"
-           data-categoria="Importação"
-           data-texto="Visão aprofundada para profissionais de comércio exterior.">
-    <span class="text-xs text-purple-600 font-semibold">Análise técnica</span>
-    <h4 class="text-xl font-bold mt-2 titulo">Impactos fiscais da DUIMP no desembaraço aduaneiro</h4>
-    <p class="text-gray-600 mt-2">Visão aprofundada para profissionais de comércio exterior.</p>
-    <span class="text-blue-600 font-semibold mt-3 inline-block">Ler análise</span>
-  </article>
 </section>
 
 <aside class="space-y-8">
   <div class="bg-white rounded-xl shadow p-6">
-    <h4 class="font-bold mb-4">Editorias</h4>
-    <ul class="space-y-2 text-sm">
-      <li class="cursor-pointer hover:text-blue-600 filtro">Importação</li>
-      <li class="cursor-pointer hover:text-blue-600 filtro">Exportação</li>
-      <li class="cursor-pointer hover:text-blue-600 filtro">Tributação</li>
-      <li class="cursor-pointer hover:text-blue-600 filtro">Logística</li>
-      <li class="cursor-pointer hover:text-blue-600 filtro">Legislação</li>
-      <li class="cursor-pointer hover:text-blue-600 filtro">Opinião</li>
-    </ul>
+    <h4 class="font-bold mb-3">Newsletter</h4>
+    <input id="emailNewsletter" placeholder="Seu email"
+           class="w-full border rounded-lg px-3 py-2 mb-3"/>
+    <button id="assinarNewsletter" class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold">
+      Assinar
+    </button>
   </div>
 
   <div class="bg-white rounded-xl shadow p-6">
-    <h4 class="font-bold mb-3">Newsletter Semanal</h4>
-    <p class="text-sm text-gray-600 mb-4">Resumo técnico e acessível do comércio exterior.</p>
-    <button class="w-full bg-blue-700 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">
-      Assinar
+    <h4 class="font-bold mb-4">Planos</h4>
+    <button class="w-full bg-gray-200 py-2 rounded mb-2">Básico</button>
+    <button id="assinarPremium" class="w-full bg-blue-700 text-white py-2 rounded">
+      Premium
     </button>
   </div>
 </aside>
@@ -118,55 +93,51 @@
   </div>
 </footer>
 
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4">
-  <div class="bg-white rounded-xl max-w-xl w-full p-6">
-    <h3 id="modalTitulo" class="text-xl font-bold mb-3"></h3>
-    <p id="modalTexto" class="text-gray-700"></p>
-    <button id="fecharModal" class="mt-6 bg-blue-700 text-white px-4 py-2 rounded-lg">Fechar</button>
+<div id="modalLogin" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center">
+  <div class="bg-white p-6 rounded-xl w-full max-w-sm">
+    <h3 class="text-xl font-bold mb-4">Login</h3>
+    <input id="userEmail" placeholder="Email" class="w-full border p-2 mb-3 rounded"/>
+    <button id="loginUser" class="w-full bg-blue-700 text-white py-2 rounded">Entrar</button>
   </div>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+let usuario = JSON.parse(localStorage.getItem("usuario")) || null;
 
-  const noticias = document.querySelectorAll(".noticia");
-  const modal = document.getElementById("modal");
-  const modalTitulo = document.getElementById("modalTitulo");
-  const modalTexto = document.getElementById("modalTexto");
-  const fecharModal = document.getElementById("fecharModal");
-  const busca = document.getElementById("busca");
-  const filtros = document.querySelectorAll(".filtro");
+document.getElementById("btnLogin").onclick = () => {
+  document.getElementById("modalLogin").classList.remove("hidden");
+};
 
-  noticias.forEach(n => {
-    n.addEventListener("click", () => {
-      modalTitulo.innerText = n.querySelector(".titulo").innerText;
-      modalTexto.innerText = n.dataset.texto;
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    });
-  });
+document.getElementById("loginUser").onclick = () => {
+  usuario = { email: document.getElementById("userEmail").value, plano: "free" };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+  alert("Login realizado");
+  location.reload();
+};
 
-  fecharModal.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
-
-  busca.addEventListener("input", e => {
-    const termo = e.target.value.toLowerCase();
-    noticias.forEach(n => {
-      n.style.display = n.innerText.toLowerCase().includes(termo) ? "" : "none";
-    });
-  });
-
-  filtros.forEach(f => {
-    f.addEventListener("click", () => {
-      const cat = f.innerText;
-      noticias.forEach(n => {
-        n.style.display = n.dataset.categoria === cat ? "" : "none";
-      });
-    });
-  });
-
+document.querySelectorAll(".acessarPremium").forEach(btn => {
+  btn.onclick = () => {
+    if (!usuario || usuario.plano !== "premium") {
+      alert("Conteúdo exclusivo para assinantes premium");
+    } else {
+      alert("Conteúdo liberado");
+    }
+  };
 });
+
+document.getElementById("assinarPremium").onclick = () => {
+  if (!usuario) {
+    alert("Faça login primeiro");
+    return;
+  }
+  usuario.plano = "premium";
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+  alert("Plano Premium ativado");
+};
+
+document.getElementById("assinarNewsletter").onclick = () => {
+  alert("Email cadastrado na newsletter");
+};
 </script>
 
 </body>
